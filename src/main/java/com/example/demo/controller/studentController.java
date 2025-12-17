@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import org.springframework.web.bind.annotation.RestController;
+
 import com.example.demo.entity.*;
 import com.example.demo.service.*;
+import jakarta.validation.Valid;
 
 @RestController
 public class studentController{
@@ -14,4 +16,7 @@ public class studentController{
     public List<studentEntity>getAll(){
         return service.getAll();
     }
+
+    @PostMapping("/add")
+    public studentEntity addStudent(@Valid @RequestBody studentEntity )
 }
