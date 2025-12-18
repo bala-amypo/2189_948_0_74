@@ -40,4 +40,5 @@ public class studentController {
     public studentEntity deletebyId(@PathVariable Long id){
         return service.deletebyId(id);
     }
+    
 }

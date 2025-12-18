@@ -9,5 +9,5 @@ public interface studentService{
     studentEntity addStudent(studentEntity student);
     studentEntity getbyId(Long id);
     studentEntity updateById(Long id,studentEntity newstu);
-    String deletebyId(Long id);
+    studentEntity deletebyId(Long id);
 }
