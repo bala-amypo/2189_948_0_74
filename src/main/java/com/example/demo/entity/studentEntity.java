@@ -28,7 +28,7 @@ public class studentEntity{
         this.name=name;
     }
     
-    public String getName(String name){
+    public String getName(){
         return name;
     }
 
@@ -36,7 +36,7 @@ public class studentEntity{
         this.email=email;
     }
     
-    public String getEmail(String email){
+    public String getEmail(){
         return email;
     }
 
