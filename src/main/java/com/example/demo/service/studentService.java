@@ -7,7 +7,7 @@ import java.util.*;
 public interface studentService{
     List<studentEntity>getAll();
     studentEntity addStudent(studentEntity student);
-    studentEntity getById(Long id);
+    studentEntity getbyId(Long id);
     studentEntity updateById(Long id,studentEntity newstu);
-    String deleteByID(Long id,studentEntity newstu);
+    String deletebyId(Long id);
 }
