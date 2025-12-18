@@ -27,7 +27,7 @@ public class studentController {
     }
     
     @GetMapping("/get/{id}")
-    public studentEntitygetbuId(@PathVariable Long id){
+    public studentEntitygetbyId(@PathVariable Long id){
         return service.getbyId(id);
     }
     @PutMapping("/update/{id}")
@@ -37,6 +37,7 @@ public class studentController {
 
     @DeleteMapping("/delete/{id}")
     public studentEntity deleteByID(@PathVariable Long id){
-        return service.deleteByID(id);
+        service.deleteByID(id);
+        return "Deleted Successfully!!!!!!!";
     }
 }
