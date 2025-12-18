@@ -10,6 +10,7 @@ import com.example.demo.entity.*;
 import com.example.demo.service.*;
 
 @RestController
+@RequestMapping("/student")
 public class studentController {
 
     @Autowired
@@ -25,4 +26,8 @@ public class studentController {
         return service.addStudent(student);
     }
     
+    @GetMapping("/get/{id}")
+    public studentEntitygetbuId(@PathVariable Long id){
+        return service.getbyId(id);
+    }
 }
