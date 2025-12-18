@@ -6,7 +6,7 @@ import org.springframework.stereotype.*;
 
 import com.example.demo.entity.*;
 import com.example.demo.repository.*;
-import com.example.demo.service.*;
+import com.example.demo.service.studentService;
 import com.example.demo.exception.*;
 
 @Service
@@ -33,9 +33,9 @@ public class studentServiceImpl implements studentService{
         return repo.save(newstu);
     }
 
-    public String deleteByID(Long id){
+    public String deletebyId(Long id){
         studentEntity data = getbyId(id);
-        repo.deleteByID(data);
+        repo.deletebyId(data);
         return "Deleted Successfully!!!!!!!!!!!!";
     }
 }
