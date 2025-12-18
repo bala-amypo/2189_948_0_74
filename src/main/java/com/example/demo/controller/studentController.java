@@ -1,11 +1,16 @@
 package com.example.demo.controller;
+import java.util.List;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.*;
+import com.example.demo.entity.Autowired;
+import com.example.demo.entity.studentEntity;
 import com.example.demo.service.studentService;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import jakarta.validation.Valid;
-import java.util.*;
 
 @RestController
 public class studentController{
