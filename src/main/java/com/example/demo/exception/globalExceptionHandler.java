@@ -3,6 +3,7 @@ package com.example.demo.exception;
 import org.springframework.http.*;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import com.example.demo.exception.*;
 
 import java.util.*;
 
@@ -19,7 +20,7 @@ public class globalExceptionHandler {
 
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<String>handleStudentNotValid(StudentNotFoundException ex){
-        return ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
+        return ResponseEntity<?>(ex.getMessage(),HttpStatus.NOT_FOUND);
     }
 
 }
