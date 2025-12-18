@@ -24,18 +24,18 @@ public class studentServiceImpl implements studentService{
     }
 
     public studentEntity getbyId(Long id){
-        return repo.findbyId(id).orElseThrow(()->throw new StudentNotFoundException("Student ID not Found"));
+        return repo.findById(id).orElseThrow(()-> new StudentNotFoundException("Student ID not Found"));
     }
 
     public studentEntity updateById(Long id,studentEntity newstu){
-        studentEntity existing = getbyId(id);
+        studentEntity existing = getById(id);
         newstu.setId(existing.getId());
         return repo.save(newstu);
     }
 
-    public void deleteByID(Long id){
-        studentEntity data = getbyId(id);
-        repo.delete(data);
+    public String deleteByID(Long id){
+        studentEntity data = getById(id);
+        repo.deleteByID(data);
         return "Deleted Successfully!!!!!!!!!!!!";
     }
 }
