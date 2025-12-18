@@ -30,15 +30,14 @@ public class studentController {
     public studentEntity getbyId(@PathVariable Long id){
         return service.getbyId(id);
     }
-    
+
     @PutMapping("/update/{id}")
-    public studentEntity updateById(@Pathvariable Long id,@Valid @RequestBody studentEnity newstu){
+    public studentEntity updateById(@Pathvariable Long id,@Valid @RequestBody studentEntity newstu){
         return service.updateById(id,newstu);
     }
 
     @DeleteMapping("/delete/{id}")
     public studentEntity deleteByID(@PathVariable Long id){
-        service.deleteByID(id);
-        return "Deleted Successfully!!!!!!!";
+        return service.deleteByID(id);
     }
 }
