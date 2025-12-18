@@ -32,12 +32,12 @@ public class studentController {
     }
 
     @PutMapping("/update/{id}")
-    public studentEntity updateById(@Pathvariable Long id,@Valid @RequestBody studentEntity newstu){
+    public studentEntity updateById(@PathVariable Long id,@Valid @RequestBody studentEntity newstu){
         return service.updateById(id,newstu);
     }
 
     @DeleteMapping("/delete/{id}")
-    public studentEntity deleteByID(@PathVariable Long id){
-        return service.deleteByID(id);
+    public studentEntity deletebyId(@PathVariable Long id){
+        return service.deletebyId(id);
     }
 }
