@@ -24,6 +24,22 @@ public class studentEntity{
         return id;
     }
 
+    public void setName(String name){
+        this.name=name;
+    }
+    
+    public String getName(String name){
+        return name;
+    }
+
+    public void setEmail(String email){
+        this.email=email;
+    }
+    
+    public String getEmail(String email){
+        return email;
+    }
+
     public studentEntity(){
 
     }
